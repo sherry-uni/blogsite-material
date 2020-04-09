@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157534424-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157534424-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QQ's Wonderland</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/scss/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Noto+Sans+TC" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!-- 引用bootstrap相關的JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</head>
+
+<!-- defalut color used in this page
+$primary:rgb(255, 188, 101) !default;
+$secondary:rgb(247,163,163) !default;
+$success:rgb(125,175,240) !default;
+$info: rgb(213,205,205)
+ -->
+
+<body class="bg-light">
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+        <a class="navbar-brand title my-0" href="#header">QQ's</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-dark title-nav" href="/travel.html"> Travel <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-dark title-nav" href="/daily.html">Daily</a></li>
+                <!-- <li class="nav-item"><a class="nav-link text-dark title-nav" href="/shopping.html">Shopping</a></li>
+                <li class="nav-item"><a class="nav-link text-dark title-nav" href="/others.html">Others</a></li> -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark title-nav" href="#" id="navbarDropdownMenuLink"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Explore
+                    </a>
+                    <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item  title-nav" href="/travel.html#tw">Taiwan</a>
+                        <a class="dropdown-item title-nav" href="/travel.html#hk">Hong Kong</a>
+                        <a class="dropdown-item title-nav" href="/travel.html#korea">Korea</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="d-none d-lg-block">
+            <a class="text-decoration-none mr-2 text-right" href="https://www.instagram.com/a_year_of_dessert/"
+                target="blank"><i class="fab fa-instagram text-below-icon text-dark"></i>
+            </a>
+            <a class="text-decoration-none text-right" href="https://www.youtube.com/"><i
+                    class="fab fa-youtube text-below-icon text-dark"></i></a>
+        </div>
+    </nav>
+    <!-- nav end -->
+    <!-- header list -->
+    <!-- <div id="list" class="text-center ">
+        <h4 class="title title-bg">Category</h4>
+    </div> -->
+    <!-- <p class="text-center text-dark">choose a life style </p> -->
+    <!-- <section class="row  justify-content-center my-1 ">
+        <div class="row row-cols-6 col-md-6 pt-3 justify-content-center">
+            <div class="col-md-3 text-center icon-shadow">
+                <a class="text-decoration-none" href="/travel.html"><i
+                        class="fas fa-suitcase-rolling text-below-icon text-dark"></i>
+                    <p class="icon-bg">Travel</p>
+                </a>
+            </div>
+            <div class="col-md-3 text-center icon-shadow">
+                <a class="text-decoration-none" href="/daily.html"><i class="fas fa-book text-below-icon text-dark"></i>
+                    <p class="icon-bg">Daily</p>
+                </a>
+            </div>
+            <div class="col-md-3 text-center icon-shadow">
+                <a class="text-decoration-none" href="/favorite.html"><i
+                        class="fas fa-heart text-below-icon text-dark"></i>
+                    <p class="icon-bg">Fav</p>
+                </a>
+            </div>
+            <div class="col-md-3 text-center icon-shadow">
+                <a class="text-decoration-none" href="/others.html"><i
+                        class="fas fa-photo-video text-below-icon text-dark"></i>
+                    <p class=" icon-bg">Others</p>
+                </a>
+            </div>
+        </div>
+    </section> -->
+    <!-- header list end -->
+    <!-- header -->
+    <header id="header" class=" bg-dark text-white text-center mb-5">
+        <div>
+            <h1 class="text-center big-title">QQ's <br> Wonderland</h1>
+            <p class="text-white col-12 text-center">
+            </p>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+
+    <!-- card section -->
+    <section>
+        <div class="card-columns px-5">
+            <a href="/travel/five-guys.html">
+                <div class="card card-header bg-info px-0 py-0">
+                    <img src="https://live.staticflickr.com/65535/49556028468_99bf38bbcf.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-transparent w-100">
+                        <p class="text-center"><span class="title">Five Guys</span> <br> Must try burger<br><span
+                                class="zh-text">香港 必吃漢堡店</span></p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="text-decoration-none" href="/travel/hongkong-food-kwaifong.html">
+                <div class="card text-center bg-primary py-2">
+                    <h5 class="card-title">Kwai Chung Square</h5>
+                    <p class="card-text">Kwai Fong <br><span style="font-size: 20px;">香港 葵涌廣場 在地人指路</span>
+                    </p>
+                </div>
+            </a>
+
+            <a href="/daily/lemon-tart.html">
+                <div class="card card-header bg-info px-0 py-0">
+                    <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                    <img src="https://live.staticflickr.com/65535/49556524976_e459bdd1cc_z.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-transparent w-100">
+                        <p class="text-center"><span class="title">Lemon Tart</span> <br> Homemade Dessert
+                            Receipt<br><span class="zh-text">檸檬塔 手做甜點全攻略</span></p>
+                    </div>
+                </div>
+            </a>
+            <a class="text-decoration-none" href="/travel/tw-atrraction-beiman-church.html">
+                <div class="card text-center bg-secondary py-2">
+                    <h5 class="card-title">Taiwan</h5>
+                    <p class="card-text">Tainan <br><span style="font-size: 20px;">台南 北門教堂</span>
+                    </p>
+                </div>
+            </a>
+            <a href="/travel/hongkong-food-hunghom.html">
+                <div class="card card-header bg-light px-0 py-0">
+                    <img src="https://live.staticflickr.com/65535/49556025848_31c9cc5703.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-transparent w-100">
+                        <p class="text-center"><span class="title">Hong Kong</span> <br> What to eat in HungHom<br><span
+                                class="zh-text">香港 紅墈吃什麼</span></p>
+                    </div>
+                </div>
+            </a>
+            <a class="text-decoration-none" href="/travel/tw-taitung-food.html">
+                <div class="card text-center bg-info py-2">
+                    <h5 class="card-title">Taiwan</h5>
+                    <p class="card-text">Taitung <br><span style="font-size: 20px;">台東吃甚麼 美食推薦</span>
+                    </p>
+                </div>
+            </a>
+            <a href="/travel/korea-cafe-rooftop.html">
+                <div class="card card-header bg-light px-0 py-0">
+                    <img src="https://live.staticflickr.com/65535/49556760802_27f23060c9.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-transparent w-100">
+                        <p class="text-center"><span class="title">Korea</span> <br> Coffee Shop<br><span
+                                class="zh-text">韓國
+                                必訪咖啡店</span></p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="card">
+                <img src="https://picsum.photos/id/1060/5598/3732" class="card-img-top" alt="...">
+            </div>
+
+            <a href="/daily/puff.html">
+                <div class="card card-header bg-light px-0 py-0 border-0">
+                    <img src="https://live.staticflickr.com/65535/49556761807_1376b3d83c_z.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-transparent w-100">
+                        <p class="text-center"><span class="title">Puff Tart</span> <br>Homemade Dessert Receipt
+                            <br><span class="zh-text">泡芙塔 手做甜點全攻略</span></p>
+                    </div>
+                </div>
+            </a>
+            <a class="text-decoration-none" href="">
+                <div class="card text-center bg-success py-2">
+                    <h5 class="card-title">Korea</h5>
+                    <p class="card-text">Hongdae<br><span style="font-size: 20px;">韓國 弘大特輯</span>
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- card section end -->
+
+    <!--TODO: stoty section-->
+    <!-- <section>
+        <div id="story" class="text-center mt-2 pt-3">
+            <h4 class="title title-bg">Stories</h4>
+            <p class="text-dark">explore new world and perspect with us</p>
+        </div>
+        <div class="row mt-2">
+            <div class="col card story-card ml-5 px-0 border border-white" style="width: 16rem;">
+                <a href=" #" class=" article-recom text-decoration-none">
+                    <div class="text-white text-center zh-text">
+                        <h5><i class="fas fa-umbrella-beach"></i></h5>
+                        <h4 class="title">Chiayi</h4>
+                        <p>2020 太保市花海節</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col card story-card mx-1 px-0 border border-white  style=" width: 16rem;">
+                <a href=" #" class=" article-recom text-decoration-none">
+                    <div class="text-white text-center zh-text">
+                        <h5><i class="fas fa-umbrella-beach"></i></h5>
+                        <h4 class="title">Chiayi</h4>
+                        <p>2020 太保市花海節</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col card story-card mr-5 px-0 border border-white  style=" width: 16rem;">
+                <a href="#" class=" article-recom text-decoration-none">
+                    <div class="text-white text-center zh-text">
+                        <h5><i class="fas fa-umbrella-beach"></i></h5>
+                        <h4 class="title">Chiayi</h4>
+                        <p>2020 太保市花海節</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section> -->
+    <!-- story section end-->
+
+    <!-- writer intro -->
+    <section id="writers">
+        <div class="text-center my-3 pb-3">
+            <h4 class="title">Co-Writers</h4>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card card-header bg-light col-sm-2 col-3 px-0 py-0 border-0">
+                <img src="https://live.staticflickr.com/65535/49556022608_c294cabdc0.jpg"
+                    class="card-img-top writer-intro" alt="...">
+                <div class="card-author w-100 text-center title-author d-none d-sm-block">
+                    Sherry Chen
+                </div>
+            </div>
+            <div class="card card-header bg-light col-sm-2 col-3 px-0 py-0 border-0 mx-sm-5 mx-3">
+                <img src="https://live.staticflickr.com/65535/49556022673_3a51fb3710.jpg"
+                    class="card-img-top writer-intro" alt="...">
+                <div class="card-author w-100 text-center title-author d-none d-sm-block">
+                    Arlene Deng
+                </div>
+            </div>
+            <div class="card card-header bg-light col-sm-2 col-3 px-0 py-0 border-0">
+                <img src="https://live.staticflickr.com/65535/49556754822_eec15c8f2a.jpg"
+                    class="card-img-top writer-intro" alt="...">
+                <div class="card-author w-100 text-center title-author d-none d-sm-block">
+                    Yilian Ho
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- writer intro end -->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer-end bg-info mt-5 text-center">
+            <div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 col-sm-6 footer-list">
+                        <h4 class="title">Contact Us</h4>
+                        <div>
+                            <a class="text-decoration-none mx-1 text-right"
+                                href="https://www.instagram.com/a_year_of_dessert/" target="blank"><i
+                                    class="fab fa-instagram text-below-icon text-white"></i>
+                            </a>
+                            <a class="text-decoration-none mx-1 text-right" href="https://www.youtube.com/"
+                                target="blank"><i class="fab fa-youtube text-below-icon text-white"></i></a>
+                            <a class="text-decoration-none" href="mailto:service@brand.com">
+                                <p>QQQQQQQQ.com</p>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <!-- TODO:go-back button -->
+    <!-- go-back button end -->
+</body>
+
+</html>
